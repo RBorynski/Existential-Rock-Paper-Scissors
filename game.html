@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title></title>
-<script src="script.js"></script>
+
+<style>
+ header{text-align: center; }
+ .Scoreboards{
+  height: 40px;
+  width: 50px;
+  background-color: blue;
+  margin: 0 auto;
+  display: inline-block;
+ }
+    #compScoreboard {background-color: red;
+      height: 40px;
+       width: 50px;
+       position: relative;
+       left: 50px;
+      }
+.gameButtons {
+ display: block;
+ float : left;
+ height: 50px;
+ width: 50px;
+}
+
+#compScreen {
+width: 150px;
+height: 120px;
+background-color: black;
+position: absolute;
+left: 180px;
+}
+
+.endButtons{
+  display: none;
+}
+</style>
+
 </head>
 <body>
- <div class= "Scoreboards">
-    <div id= "playerScoreboard"> </div>
-    <div id= "computerScoreboard"> </div>
+ <header>
+  <h1> Rock, Paper, Scissors </h1>
+  <h2> Man vs. Machine </h2>
+   <div>
+     <div id ="playerScoreboard" class = "Scoreboards" >
+     </div>
+     <div id="compScoreboard" class = "Scoreboards">
+     </div>
+   </div>
+</header>
+
+<div class= "gameButtons">
+    <button id= "rockButton" class="rpsButtonClass"> rock </button>
+     <button id= "paperButton" class="rpsButtonClass" > paper</button>
+     <button id= "scissorsButton" class="rpsButtonClass" > scissors </button>
 </div>
-<button class= "gameButtons">
-    <button id= "rockButton"> </button>
-    <button id= "paperButton" > </button>
-    <button id= "paperButton" > </button>
-</button>
-<div id="compScreen"> </div>
-<button class="endButtons">
-   <button id ="roundButton"></button>
-   <button id = "resetButton"></button>
-</button>
+<div id="compScreen"> kjkjkjkkkjj</div>
+
+   <button id ="roundButton" class = "endButtons">nextRound</button>
+   <button id = "resetButton" class = "endButtons">Reset</button>
+
+<script src="script.js"></script>
 </body>
 </html>
