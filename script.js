@@ -13,14 +13,25 @@ var buttonsInClass = document.getElementsByClassName("rpsButtonClass");
 var nextRoundButton = document.getElementById("roundButton");
 var newGameButton =  document.getElementById("resetButton");
 var compScreen = document.getElementById("compScreen") ;
+var nameInputDOMElement = document.querySelector('.name');
+var identity = document.getElementsByClassName("identity");
+var form = document.querySelector("#form");
+
+// var ConvertInput = function(){
+//    evt.preventDefault();
+//    var nameInputDOMElement = document.querySelector('.name');
+//    identity.innerHTML = nameInputDOMElement;
+// }
+
+// form.addEventListener('submit', ConvertInput)
 
 
 
 
 
 // var userChoice =
-var playerScore = 0;
-var compScore = 0;
+ var playerScore = 0;
+ var compScore = 0;
 
 
 
@@ -59,7 +70,6 @@ var compChoice = function(){
  }
  var zerototwo = getRandomInt();
 var conv =  compOptions[zerototwo];
-compScreen.innerHTML = conv.choice;
 return conv;
 }
 
@@ -93,11 +103,12 @@ newGameButton.style.display = "none";
 var RockVs = function(){
     // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
-   compChoice();
-if (compChoice().choice == "paper") {
+ var y =  compChoice().choice;
+ compScreen.innerHTML = y;
+if (y == "paper") {
    compScore = compScore + 1;
    updateCompScore();
-} else if (compChoice().choice == "scissors")
+} else if (y == "scissors")
 {
   playerScore = playerScore + 1;
   updatePlayerScore();
@@ -108,12 +119,12 @@ checkForGameOver();
 var PaperVs = function(){
     // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
-   compChoice();
-    console.log('this is my choice: ', compChoice().choice);
-if (compChoice().choice == "scissors") {
+   var y = compChoice().choice;
+  compScreen.innerHTML = y;
+if (y == "scissors") {
    compScore = compScore + 1;
    updateCompScore();
-} else if (compChoice().choice == "rock")
+} else if (y == "rock")
 {
   playerScore = playerScore + 1;
   updatePlayerScore();
@@ -124,11 +135,12 @@ checkForGameOver()
 var ScissorsVs = function(){
     // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
-   compChoice();
-if (compChoice().choice == "rock") {
+  var y = compChoice().choice;
+   compScreen.innerHTML = y;
+if (y == "rock") {
    compScore = compScore + 1;
    updateCompScore();
-} else if (compChoice().choice == "paper")
+} else if (y== "paper")
 {
   playerScore = playerScore + 1;
   updatePlayerScore();
