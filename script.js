@@ -12,8 +12,9 @@ var compOptions = [
 var buttonsInClass = document.getElementsByClassName("rpsButtonClass");
 var nextRoundButton = document.getElementById("roundButton");
 var newGameButton =  document.getElementById("resetButton");
+var compScreen = document.getElementById("compScreen") ;
 
-console.log (newGameButton)
+
 
 
 
@@ -38,11 +39,12 @@ updateCompScore();
  {
  if (playerScore == 3) {
          alert ("Congratulations");
-  newGameButton.style.display ="block"}
-
-if (compScore == 3) {
+  newGameButton.style.display ="block";
+  nextRoundButton.style.display = "hidden";}
+else if (compScore == 3) {
          alert ("Better Luck Next Time!");
-  newGameButton.style.display ="block"}
+  newGameButton.style.display ="block";
+ nextRoundButton.style.display = "hidden";}
 
 else {
   nextRoundButton.style.display = "block";
@@ -57,6 +59,7 @@ var compChoice = function(){
  }
  var zerototwo = getRandomInt();
 var conv =  compOptions[zerototwo];
+compScreen.innerHTML = conv.choice;
 return conv;
 }
 
@@ -83,17 +86,14 @@ var newGame = function(){
   compScore = 0;
 updatePlayerScore();
 updateCompScore();
+newGameButton.style.display = "none";
+
 }
-
-
-
-
 
 var RockVs = function(){
     // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
    compChoice();
-   console.log('this is my choice: ', compChoice().choice);
 if (compChoice().choice == "paper") {
    compScore = compScore + 1;
    updateCompScore();
@@ -102,17 +102,45 @@ if (compChoice().choice == "paper") {
   playerScore = playerScore + 1;
   updatePlayerScore();
 }
-  else {
-    console.log("Sorry");
-  }
+checkForGameOver();
+}
+
+var PaperVs = function(){
+    // document.querySelectorAll(".gameButtons").style.display = "none" ;
+  rpsDisappear();
+   compChoice();
+    console.log('this is my choice: ', compChoice().choice);
+if (compChoice().choice == "scissors") {
+   compScore = compScore + 1;
+   updateCompScore();
+} else if (compChoice().choice == "rock")
+{
+  playerScore = playerScore + 1;
+  updatePlayerScore();
+}
 checkForGameOver()
- }
+}
+
+var ScissorsVs = function(){
+    // document.querySelectorAll(".gameButtons").style.display = "none" ;
+  rpsDisappear();
+   compChoice();
+if (compChoice().choice == "rock") {
+   compScore = compScore + 1;
+   updateCompScore();
+} else if (compChoice().choice == "paper")
+{
+  playerScore = playerScore + 1;
+  updatePlayerScore();
+}
+checkForGameOver()
+}
 
  rButton.addEventListener("click", RockVs);
- // pButton.addEventListener("click", PaperVs);
- // var ScissorsClick = sButton.addEventListener("click", ScissorVs);
+ pButton.addEventListener("click", PaperVs);
+ sButton.addEventListener("click", ScissorsVs);
   nextRoundButton.addEventListener("click", rpsAppear);
-  newGameButton.addEventListener("click", newGame)
+  newGameButton.addEventListener("click", newGame);
  // location.reload(forceGet)
 
 
