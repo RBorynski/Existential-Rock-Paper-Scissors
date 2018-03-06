@@ -1,8 +1,3 @@
-var playerOptions = [
-{choice:"rock", image:"_"},
-{choice:"paper", image:"_"},
-{choice:"scissors", image:"_"},
-]
 
 var compOptions = [
 {choice:"rock", image:"_"},
@@ -14,16 +9,27 @@ var nextRoundButton = document.getElementById("roundButton");
 var newGameButton =  document.getElementById("resetButton");
 var compScreen = document.getElementById("compScreen") ;
 var nameInputDOMElement = document.querySelector('.name');
-var identity = document.getElementsByClassName("identity");
-var form = document.querySelector("#form");
 
-// var ConvertInput = function(){
-//    evt.preventDefault();
-//    var nameInputDOMElement = document.querySelector('.name');
-//    identity.innerHTML = nameInputDOMElement;
-// }
+// var form = document.querySelector("#form");
+var form = document.querySelector('.form')
 
-// form.addEventListener('submit', ConvertInput)
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+// https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+var name = getParameterByName('player-name');
+ var identity = document.querySelector(".identity");
+ identity.innerHTML = name;
+// var manVs = querySelector(".identity");
+
+
+
 
 
 

@@ -5,14 +5,41 @@
   <title></title>
 
 <style>
- header{text-align: center; }
+ body
+ {
+  background-color: rgb(156, 154, 154);
+ }
+
+ header{text-align: center;
+ positon: relative;
+  left: 20px;
+  }
+
+ h2{
+  font-size: 60px;
+   text-shadow: 2px 2px 8px rgba(27, 32, 36, 1) ;
+ }
+
+ .identity{
+  color: blue;
+ }
+
+.machine{
+  color: red;
+}
+
  .Scoreboards{
   height: 40px;
   width: 50px;
   background-color: blue;
   margin: 0 auto;
   display: inline-block;
+  padding: 30px;
+  font-size:50px;
+
  }
+
+
     #compScoreboard {background-color: red;
       height: 40px;
        width: 50px;
@@ -24,27 +51,61 @@
  float : left;
  height: 50px;
  width: 50px;
+ display: block;
 }
 
 #compScreen {
-width: 150px;
-height: 120px;
+width: 900px;
+height: 400px;
 background-color: black;
 position: absolute;
-left: 180px;
+left: 400px;
 color: white;
+margin: 0 auto;
+font-size: 140px;
+text-align: center;
+padding-top: 70px;
 }
 
 .endButtons{
   display: none;
+  width: 400px;
+  height: 120px;
+  position: relative;
+  right: 100px;
+  float: left;
+ font-size: 30px;
 }
+
+.rpsButtonClass {
+  width: 400px;
+  height: 150px;
+}
+
+#rockButton {
+ background: url("images/gamepictures/rock.jpg") ;
+ background-size: cover;
+
+}
+#paperButton {
+ background: url("images/gamepictures/paper.jpg") ;
+ background-size: cover;
+
+}
+#scissorsButton {
+ background: url("images/gamepictures/scissors2.jpg") ;
+ background-size: cover;
+
+}
+
+
 </style>
 
 </head>
 <body>
  <header>
   <h1> Rock, Paper, Scissors </h1>
-  <h2> <span class = "identity"> </span> vs. Machine </h2>
+  <h2> <span class = "identity"> </span> vs. <span class = "machine"> Machine </span> </h2>
    <div>
      <div id ="playerScoreboard" class = "Scoreboards" >
      </div>
@@ -52,16 +113,16 @@ color: white;
      </div>
    </div>
 </header>
-
 <div class= "gameButtons">
-    <button id= "rockButton" class="rpsButtonClass"> rock </button>
+    <button id= "rockButton" class="rpsButtonClass"> rock
+    </button>
      <button id= "paperButton" class="rpsButtonClass" > paper</button>
      <button id= "scissorsButton" class="rpsButtonClass" > scissors </button>
 </div>
-<div id="compScreen"> kjkjkjkkkjj</div>
+<div id="compScreen"></div>
 
-   <button id ="roundButton" class = "endButtons">nextRound</button>
-   <button id = "resetButton" class = "endButtons">Reset</button>
+   <button id ="roundButton" class = "endButtons">Next Round</button>
+   <button id = "resetButton" class = "endButtons">New Game!</button>
 
 <script src="script.js"></script>
 </body>
