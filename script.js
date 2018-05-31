@@ -71,18 +71,18 @@ var compChoice = function() {
   return conv;
 };
 
-var rButton = document.getElementById("rockButton");
-var pButton = document.getElementById("paperButton");
-var sButton = document.getElementById("scissorsButton");
+var rockButton = document.getElementById("rockButton");
+var paperButton = document.getElementById("paperButton");
+var scissorsButton = document.getElementById("scissorsButton");
 var rpsDisappear = function() {
-  rButton.style.display = "none";
-  pButton.style.display = "none";
-  sButton.style.display = "none";
+  rockButton.style.display = "none";
+  paperButton.style.display = "none";
+  scissorsButton.style.display = "none";
 };
 var rpsAppear = function() {
-  rButton.style.display = "block";
-  pButton.style.display = "block";
-  sButton.style.display = "block";
+  rockButton.style.display = "block";
+  paperButton.style.display = "block";
+  scissorsButton.style.display = "block";
   nextRoundButton.style.display = "none";
 };
 
@@ -140,9 +140,9 @@ var ScissorsVs = function() {
   checkForGameOver();
 };
 
-rButton.addEventListener("click", RockVs);
-pButton.addEventListener("click", PaperVs);
-sButton.addEventListener("click", ScissorsVs);
+rockButton.addEventListener("click", RockVs);
+paperButton.addEventListener("click", PaperVs);
+scissorsButton.addEventListener("click", ScissorsVs);
 nextRoundButton.addEventListener("click", rpsAppear);
 newGameButton.addEventListener("click", newGame);
 // location.reload(forceGet)
