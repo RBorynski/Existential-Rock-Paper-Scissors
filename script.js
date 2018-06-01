@@ -10,7 +10,7 @@ const compScreen = document.getElementById("compScreen");
 const nameInputDOMElement = document.querySelector(".name");
 
 // var form = document.querySelector("#form");
-var form = document.querySelector(".form");
+const form = document.querySelector(".form");
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
@@ -22,19 +22,19 @@ function getParameterByName(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-var name = getParameterByName("player-name");
-var identity = document.querySelector(".identity");
+const name = getParameterByName("player-name");
+const identity = document.querySelector(".identity");
 identity.innerHTML = name;
 // var manVs = querySelector(".identity");
 
 const updatePlayerScore = function() {
-  const pScoreboard = document.getElementById("playerScoreboard");
-  pScoreboard.innerHTML = playerScore;
+  const playerScoreboard = document.getElementById("playerScoreboard");
+  playerScoreboard.innerHTML = playerScore;
 };
 
 const updateCompScore = function() {
-  var cScoreboard = document.getElementById("compScoreboard");
-  cScoreboard.innerHTML = compScore;
+  var compScoreboard = document.getElementById("compScoreboard");
+  compScoreboard.innerHTML = compScore;
 };
 //makes the html in the scoreboard match the actual score of player and computer
 
