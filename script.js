@@ -33,7 +33,7 @@ const updatePlayerScore = function() {
 };
 
 const updateCompScore = function() {
-  var compScoreboard = document.getElementById("compScoreboard");
+  const compScoreboard = document.getElementById("compScoreboard");
   compScoreboard.innerHTML = compScore;
 };
 //makes the html in the scoreboard match the actual score of player and computer
@@ -60,13 +60,13 @@ var checkForGameOver = function() {
 };
 
 //generates computer choice*/
-var compChoice = function() {
-  var getRandomInt = function() {
+const compChoice = function() {
+  const getRandomInt = function() {
     return Math.floor(Math.random() * 3);
     //getRandomInt taken from developer.mozilla.org, gets random int between 0 and 2 (inclusive)
   };
 
-  var conv = compOptions[getRandomInt()];
+  const conv = compOptions[getRandomInt()];
   return conv;
 };
 
