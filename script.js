@@ -4,6 +4,8 @@ const compOptions = [
   { choice: "scissors", image: "_" }
 ];
 const buttonsInClass = document.getElementsByClassName("rpsButtonClass");
+const gameButtons = document.querySelector(".gameButtons");
+console.log(gameButtons);
 const nextRoundButton = document.getElementById("roundButton");
 const newGameButton = document.getElementById("resetButton");
 const compScreen = document.getElementById("compScreen");
@@ -74,14 +76,10 @@ const rockButton = document.getElementById("rockButton");
 const paperButton = document.getElementById("paperButton");
 const scissorsButton = document.getElementById("scissorsButton");
 const rpsDisappear = function() {
-  rockButton.style.display = "none";
-  paperButton.style.display = "none";
-  scissorsButton.style.display = "none";
+  gameButtons.style.display = "none";
 };
 const rpsAppear = function() {
-  rockButton.style.display = "block";
-  paperButton.style.display = "block";
-  scissorsButton.style.display = "block";
+  gameButtons.style.display = "block";
   nextRoundButton.style.display = "none";
 };
 
