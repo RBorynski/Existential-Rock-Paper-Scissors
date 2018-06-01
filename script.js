@@ -66,27 +66,26 @@ var compChoice = function() {
     //getRandomInt taken from developer.mozilla.org, gets random int between 0 and 2 (inclusive)
   };
 
-  const zerototwo = getRandomInt();
-  var conv = compOptions[zerototwo];
+  var conv = compOptions[getRandomInt()];
   return conv;
 };
 
-var rockButton = document.getElementById("rockButton");
-var paperButton = document.getElementById("paperButton");
-var scissorsButton = document.getElementById("scissorsButton");
-var rpsDisappear = function() {
+const rockButton = document.getElementById("rockButton");
+const paperButton = document.getElementById("paperButton");
+const scissorsButton = document.getElementById("scissorsButton");
+const rpsDisappear = function() {
   rockButton.style.display = "none";
   paperButton.style.display = "none";
   scissorsButton.style.display = "none";
 };
-var rpsAppear = function() {
+const rpsAppear = function() {
   rockButton.style.display = "block";
   paperButton.style.display = "block";
   scissorsButton.style.display = "block";
   nextRoundButton.style.display = "none";
 };
 
-var newGame = function() {
+const newGame = function() {
   rpsAppear();
   playerScore = 0;
   compScore = 0;
