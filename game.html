@@ -5,6 +5,7 @@
   <title></title>
 
 <style>
+
  body
  {
   background-color: rgb(156, 154, 154);
@@ -19,7 +20,12 @@
   font-size: 60px;
    text-shadow: 2px 2px 8px rgba(27, 32, 36, 1) ;
  }
-
+button {
+width: 400px;
+  height: 150px;
+font-size:5vmax;
+}
+}
  .identity{
   color: blue;
  }
@@ -49,9 +55,6 @@
 .gameButtons {
  display: block;
  float : left;
- height: 50px;
- width: 30%;
- display: block;
 }
 
 #compScreen {
@@ -69,18 +72,15 @@ padding-top: 70px;
 
 .endButtons{
   display: none;
-  width: 400px;
-  height: 120px;
-  position: relative;
-  right: 100px;
+
+/*  position: relative;
+  right: 100px;*/
   float: left;
- font-size: 30px;
+
 }
 
 .rpsButtonClass {
-  width: 400px;
-  height: 150px;
-font-size:5vmax;
+
 
 }
 
@@ -121,10 +121,11 @@ font-size:5vmax;
      <button id= "paperButton" class="rpsButtonClass" > paper</button>
      <button id= "scissorsButton" class="rpsButtonClass" > scissors </button>
 </div>
+<button id ="roundButton" class = "endButtons">Next Round</button>
+<button id = "resetButton" class = "endButtons">New Game!</button>
 <div id="compScreen"></div>
 
-   <button id ="roundButton" class = "endButtons">Next Round</button>
-   <button id = "resetButton" class = "endButtons">New Game!</button>
+
 
 <script src="script.js"></script>
 </body>
