@@ -92,47 +92,48 @@ const newGame = function() {
   newGameButton.style.display = "none";
 };
 
-var RockVs = function() {
+let RockVs = function() {
   // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
   var y = compChoice().choice;
   var x = compChoice().image;
+  compScreen.innerHTML = y;
   // compScreen.style.background = url(x);
   if (y == "paper") {
-    compScore = compScore + 1;
+    compScore++;
     updateCompScore();
   } else if (y == "scissors") {
-    playerScore = playerScore + 1;
+    playerScore++;
     updatePlayerScore();
   }
   checkForGameOver();
 };
 
-var PaperVs = function() {
+let PaperVs = function() {
   // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
   var y = compChoice().choice;
   compScreen.innerHTML = y;
   if (y == "scissors") {
-    compScore = compScore + 1;
+    compScore++;
     updateCompScore();
   } else if (y == "rock") {
-    playerScore = playerScore + 1;
+    playerScore++;
     updatePlayerScore();
   }
   checkForGameOver();
 };
 
-var ScissorsVs = function() {
+let ScissorsVs = function() {
   // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
   var y = compChoice().choice;
   compScreen.innerHTML = y;
   if (y == "rock") {
-    compScore = compScore + 1;
+    compScore++;
     updateCompScore();
   } else if (y == "paper") {
-    playerScore = playerScore + 1;
+    playerScore++;
     updatePlayerScore();
   }
   checkForGameOver();
