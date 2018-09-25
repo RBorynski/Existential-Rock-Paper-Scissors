@@ -1,5 +1,5 @@
 const compOptions = [
-  { choice: "rock", image: "_" },
+  { choice: "rock", image: "images/gamepictures/rockcomp.jpg" },
   { choice: "paper", image: "_" },
   { choice: "scissors", image: "_" }
 ];
@@ -96,7 +96,8 @@ var RockVs = function() {
   // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
   var y = compChoice().choice;
-  compScreen.innerHTML = y;
+  var x = compChoice().image;
+  // compScreen.style.background = url(x);
   if (y == "paper") {
     compScore = compScore + 1;
     updateCompScore();
