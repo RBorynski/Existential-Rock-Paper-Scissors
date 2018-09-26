@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width">
 <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
   <title></title>
@@ -34,10 +35,13 @@ main {
 
  .identity{
   color: blue;
+ font-family: 'Pacifico', cursive;
  }
 
 .machine{
   color: red;
+font-family: 'VT323', monospace;
+
 }
 
  .Scoreboards{
@@ -82,9 +86,9 @@ font-family: 'VT323', monospace;
 
 .endButtons{
   display: none;
-
   float: left;
-
+background: blue;
+flex-basis: content;
 }
 
 .rpsButtonClass {
@@ -109,7 +113,24 @@ color : rgb(243, 229, 171);
 
 }
 
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 700px)
+  and (orientation: portrait) {
 
+button {
+width: 260px;
+}
+#compScreen{
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation*/
+writing-mode: vertical-rl;
+  text-orientation: upright;
+text-align: left;
+border-color : red;
+border-width: 4px;
+}
+
+}
 
 }
 
