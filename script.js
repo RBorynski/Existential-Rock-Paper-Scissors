@@ -97,7 +97,7 @@ let RockVs = function() {
   rpsDisappear();
   var y = compChoice().choice;
   var x = compChoice().image;
-  compScreen.innerHTML = y;
+  compScreen.innerHTML = "_" + y;
   // compScreen.style.background = url(x);
   if (y == "paper") {
     compScore++;
@@ -113,7 +113,7 @@ let PaperVs = function() {
   // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
   var y = compChoice().choice;
-  compScreen.innerHTML = y;
+  compScreen.innerHTML = "_" + y;
   if (y == "scissors") {
     compScore++;
     updateCompScore();
@@ -128,7 +128,7 @@ let ScissorsVs = function() {
   // document.querySelectorAll(".gameButtons").style.display = "none" ;
   rpsDisappear();
   var y = compChoice().choice;
-  compScreen.innerHTML = y;
+  compScreen.innerHTML = "_" + y;
   if (y == "rock") {
     compScore++;
     updateCompScore();
