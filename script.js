@@ -50,14 +50,14 @@ updateCompScore();
 var checkForGameOver = function() {
   if (playerScore == 3) {
     alert("Congratulations");
-    newGameButton.style.display = "block";
+    newGameButton.style.display = "flex";
     nextRoundButton.style.display = "hidden";
   } else if (compScore == 3) {
     alert("Better Luck Next Time!");
-    newGameButton.style.display = "block";
+    newGameButton.style.display = "flex";
     nextRoundButton.style.display = "hidden";
   } else {
-    nextRoundButton.style.display = "block";
+    nextRoundButton.style.display = "flex";
   }
 };
 
@@ -79,7 +79,7 @@ const rpsDisappear = function() {
   gameButtons.style.display = "none";
 };
 const rpsAppear = function() {
-  gameButtons.style.display = "block";
+  gameButtons.style.display = "flex";
   nextRoundButton.style.display = "none";
 };
 

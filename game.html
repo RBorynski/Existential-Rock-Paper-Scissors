@@ -12,7 +12,7 @@
  }
 
  header{text-align: center;
- positon: relative;
+ position: relative;
   left: 20px;
   }
 
@@ -25,7 +25,11 @@ width: 400px;
   height: 150px;
 font-size:5vmax;
 }
+main {
+  display: flex;
+  flex-direction: row;
 }
+
  .identity{
   color: blue;
  }
@@ -47,40 +51,42 @@ font-size:5vmax;
 
 
     #compScoreboard {background-color: red;
-      /*height: 40px;
-       width: 50px;*/
-       position: relative;
+           position: relative;
        left: 50px;
       }
+/*.allButtons {
+  width: 50%;
+  height: auto;
+  background-size: contain;
+}*/
+
 .gameButtons {
- display: block;
- float : left;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
 }
 
 #compScreen {
-width: 900px;
-height: 400px;
+width: 60%;
+height: 500px;
 background: black;
-position: absolute;
-left: 400px;
 color: white;
 margin: 0 auto;
-font-size: 140px;
+font-size: 7vmax;
 text-align: center;
-padding-top: 70px;
+/*padding-top: 70px;*/
 }
 
 .endButtons{
   display: none;
 
-/*  position: relative;
-  right: 100px;*/
   float: left;
 
 }
 
 .rpsButtonClass {
-
+ display: block;
+ float : left;
 
 }
 
@@ -115,6 +121,8 @@ padding-top: 70px;
      </div>
    </div>
 </header>
+<main>
+<div class = "allButtons">
 <div class= "gameButtons">
     <button id= "rockButton" class="rpsButtonClass"> rock
     </button>
@@ -123,7 +131,9 @@ padding-top: 70px;
 </div>
 <button id ="roundButton" class = "endButtons">Next Round</button>
 <button id = "resetButton" class = "endButtons">New Game!</button>
+</div>
 <div id="compScreen"></div>
+</main>
 
 
 
