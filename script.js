@@ -5,7 +5,7 @@ const compOptions = [
 ];
 const buttonsInClass = document.getElementsByClassName("rpsButtonClass");
 const gameButtons = document.querySelector(".gameButtons");
-console.log(gameButtons);
+console.log(gameButtons); //
 const nextRoundButton = document.getElementById("roundButton");
 const newGameButton = document.getElementById("resetButton");
 const compScreen = document.getElementById("compScreen");
