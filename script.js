@@ -10,6 +10,7 @@ const nextRoundButton = document.getElementById("roundButton");
 const newGameButton = document.getElementById("resetButton");
 const compScreen = document.getElementById("compScreen");
 const nameInputDOMElement = document.querySelector(".name");
+//
 
 // var form = document.querySelector("#form");
 const form = document.querySelector(".form");
